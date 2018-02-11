@@ -1,22 +1,28 @@
 // @flow
 
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import {
-  Text,
   View,
 } from 'react-native';
 import Style from './Styles';
+import { OptionsList } from '../../components';
 
 class OptionsListScreen extends Component<Props> {
+  static propTypes = {
+    navigation: PropTypes.object.isRequired,
+  };
   render() {
     return (
       <View style={Style.container}>
-        <Text style={Style.row}>
-          Strait Sanitation Checklist
-        </Text>
+        <OptionsList navigation={this.props.navigation} />
       </View>
     );
   }
 }
 
-export default OptionsListScreen;
+function mapStateToProps() {
+  return {};
+}
+export default connect(mapStateToProps)(OptionsListScreen);

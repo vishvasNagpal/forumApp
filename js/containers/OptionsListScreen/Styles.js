@@ -8,11 +8,4 @@ export default StyleSheet.create({
     flex: 1,
     padding: 10,
   },
-  row: {
-    fontSize: 18,
-    color: '#898989',
-    borderBottomWidth: 1,
-    borderColor: '#000000',
-    padding: 10,
-  },
 });
