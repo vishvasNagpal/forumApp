@@ -4,7 +4,10 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest"
+    "test": "jest",
+    "lint": "eslint js",
+    "check:all": "npm run lint",
+    "precommit": "npm run check:all"
   },
   "dependencies": {
     "axios": "^0.17.1",
